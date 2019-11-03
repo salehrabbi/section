@@ -1,0 +1,1 @@
+$(".playerID").click(function(){var a=$("#VdoID").attr("src");0==$("#VdoID").attr("data-play")?($("#VdoID").attr("src",a+"?autoplay=1"),$("#VdoID").attr("data-play",1)):(a=(a=$("#VdoID").attr("src")).replace("?autoplay=1",""),$("#VdoID").prop("src",""),$("#VdoID").prop("src",a),$("#VdoID").attr("data-play",0))});

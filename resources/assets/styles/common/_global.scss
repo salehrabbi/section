@@ -1,0 +1,34 @@
+body {
+  font-family: $f;
+  color: #0e0e0f;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  @media (min-width: 1366px) {
+    max-width: em(1400px);
+    padding: 0 em(30px);
+  }
+}
+.space {
+  padding-top: em(100px);
+  padding-bottom: em(100px);
+  @include md {
+    padding-top: em(50px);
+    padding-bottom: em(50px);
+  }
+}
+h2 {
+  font-weight: 700;
+}
+
+h6 {
+  font-size: em(17px);
+  line-height: 150%;
+  font-weight: 700;
+}
+p {
+  color: #555;
+  font-size: em(15px);
+}

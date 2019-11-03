@@ -4,4 +4,33 @@ block title
   title Home
 
 block main
-  
+  .selling-proposition.space
+    .container
+      .row
+        .col-lg-6
+          .content
+            h2.m-0 Get Work Done Faster On Fiverr, With Confidence
+            ul.list-unstyled.p-0.m-0
+              li
+                h6 Payment Protection, Guaranteed
+                p
+                  | Payment is released to the freelancer once you’re pleased and approve the work you get.
+              li
+                h6 Know The Price Upfront
+                p
+                  | Find any service within minutes and know exactly what you’ll pay. No hourly rates, just a fixed price.
+              li
+                h6 We’re Here For You 24/7
+                p
+                  | Fiverr is here for you, anything from answering any questions to resolving any issues, at any time.
+        .col-lg-6
+          .video-modal
+            .playerID.picture-wrapper.position-relative(data-toggle="modal" data-target="#exampleModal")
+              img.w-100(src='https://fiverr-res.cloudinary.com/q_auto,f_auto,w_700,dpr_1.0/general_assets/logged_out_homepage/assets/selling_proposition/1400-selling-proposition-2x.png' alt="video's image")
+  // Modal
+  #exampleModal.modal.fade.youtube-popup.playerID(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .text-right
+          i.far.fa-times.close-btn(data-dismiss='modal' aria-label='Close')
+        iframe#VdoID(data-play="0" src='https://www.youtube.com/embed/EngW7tLk6R8' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' width='560' height='315' frameborder='0')
