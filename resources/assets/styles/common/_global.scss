@@ -1,9 +1,16 @@
+* {
+  outline: 0 !important;
+}
 body {
   font-family: $f;
   color: #0e0e0f;
 }
 img {
   max-width: 100%;
+}
+
+a {
+  color: rgb(226, 46, 126);
 }
 .container {
   @media (min-width: 1366px) {
@@ -31,4 +38,24 @@ h6 {
 p {
   color: #555;
   font-size: em(15px);
+}
+
+.color {
+  &-jacarta {
+    color: $jacarta;
+  }
+}
+
+.button {
+  background: rgb(226, 46, 126);
+  color: #fff;
+  font-weight: 700;
+  &:hover {
+    background: $jacarta;
+    color: #fff;
+  }
+}
+
+.d-grid {
+  display: grid;
 }

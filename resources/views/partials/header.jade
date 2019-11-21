@@ -1,0 +1,52 @@
+header.main-header
+  .header-top
+    .container
+      .d-flex
+        a.logo(href="#")
+          img(src="dist/images/logo.png" alt="")
+        .logo-left.ml-auto
+          ul.m-0.p-0.list-unstyled.d-flex.align-items-center.flex-wrap
+            li.mr-4
+              a.text-uppercase.font-weight-bold(href="#") fr
+            li.mr-4.icon 
+              a(href="#")
+                img(src="dist/images/bell.png" alt="")  
+            li.mr-4.icon
+              a(href="#")
+                img(src="dist/images/message.png" alt="") 
+            li.font-weight-bold
+              a(href="#") Register
+            li.mx-1 or
+            li.font-weight-bold
+              a(href="#") Sign In
+            li.ml-4
+              a.btn.button(href="#") Post ad      
+  .header-form
+    .container
+      .d-grid
+        input(type="text" placeholder="Search for anything...")
+        select.selectpicker.w-100(name='SearchCategory')
+          option(value='0') All Ads
+          option(value='10') Buy & Sell
+          option(value='72') Services
+          option(value='27') Cars & Vehicles
+          option(value='112') Pets
+          option(value='800') Vacation Rentals
+          option(value='1') Community
+          option(value='34') Real Estate
+          option(value='45') Jobs
+        select.selectpicker.w-100(name='SearchCategory')
+          option(value='0') Canada
+          option(value='10') Buy & Sell
+          option(value='72') Services
+          option(value='27') Cars & Vehicles
+          option(value='112') Pets
+          option(value='800') Vacation Rentals
+          option(value='1') Community
+          option(value='34') Real Estate
+          option(value='45') Jobs  
+        button(type="submit") 
+          <i class="fal fa-search"></i>  
+
+
+

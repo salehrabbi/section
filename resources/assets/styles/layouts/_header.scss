@@ -1,0 +1,65 @@
+.header-top {
+  padding: 15px 0;
+  border-top: 5px solid rgb(226, 46, 126);
+  .icon {
+    transition: 0.3s;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.header-form {
+  .d-grid {
+    grid-template-columns: 1fr 1fr 1fr 68px;
+  }
+  input {
+    height: 40px;
+    border-radius: 4px 0 0 4px;
+    background: none;
+    color: #3e4153;
+    border: 1px solid#d2d3d7;
+    padding: 10px 20px;
+    border-right: none;
+    &:focus {
+      outline: none;
+      border: 1px solid rgb(226, 46, 126);
+      box-shadow: 0 0 5px rgb(226, 46, 126);
+    }
+  }
+  button[type="submit"] {
+    background: none;
+    border: 1px solid#d2d3d7;
+    color: rgb(226, 46, 126);
+    transition: 0.3s;
+    border-radius: 0 5px 5px 0;
+    &:hover {
+      background: rgb(226, 46, 126);
+      color: #fff;
+      border-color: rgb(226, 46, 126);
+    }
+  }
+  .bootstrap-select {
+    &.show {
+      .dropdown-toggle {
+        border: 1px solid rgb(226, 46, 126);
+        box-shadow: 0 0 5px rgb(226, 46, 126);
+      }
+    }
+    > .dropdown-toggle {
+      background: none;
+      padding: 7px 20px;
+      border: 1px solid #d2d3d7;
+      border-right: none;
+      border-radius: 0;
+      &:after {
+        border-top: 0.3em solid #c5c6cb;
+      }
+    }
+  }
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+  outline: 0 auto !important;
+}
