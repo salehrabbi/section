@@ -1,0 +1,147 @@
+extends layouts/app.jade
+
+block title
+  title Section 4
+
+block main
+  #PageSRP
+    .container
+      .row
+        .col-md-3
+          .container-primary.srp-navigation
+            header#CurrentResultsPageTipTrigger.page-tip-trigger(data-content='KijijiAlertTooltip')
+              strong.rsp-current-matches Current Matches
+              //- strong.rsp-filter-results Filter Results
+              span.titlecount (3,362)
+            .content
+              h3 Category:
+              ul
+                li
+                  a.category-selected(href='#')
+                    | Buy & Sell
+                  |                  (2,108)
+                li
+                  a.category-selected(href='#')
+                    | Cars & Vehicles
+                  |                  (503)
+                li
+                  a.category-selected(href='#')
+                    | Real Estate
+                  |                  (495)
+                li
+                  a.category-selected(href='#')
+                    | Services
+                  |                  (117)
+                li
+                  a.category-selected(href='#')
+                    | Jobs
+                  |                  (61)
+                li
+                  a.category-selected(href='#')
+                    | Community
+                  |                  (41)
+                li
+                  a.category-selected(href='#')
+                    | Pets
+                  |                  (37)
+              hr
+              h3 Location:
+              ul
+                ul
+                  li
+                    a.location-selected(href='#')
+                      | Alberta
+                  ul
+                    li.highlight
+                      | Banff / Canmore (3,362)
+              hr
+              h3 Offer Type:
+              ul
+                li.highlight
+                  | All Types
+                ul
+                  li
+                    a.attribute-selected(href='#')
+                      | Offering
+                    |                  (3,264)
+                  li
+                    a.attribute-selected(href='#')
+                      | Wanted
+                    |                  (98)
+              hr
+              h3 Featured Ads:
+              ul
+                li.highlight
+                  | All Ads
+                ul
+                  li
+                    a.attribute-selected(href='#')
+                      | Urgent Ads
+              hr
+              h3 Price
+              form#searchForm.attribute-selected(action='#' method='get')
+                input.placeholder-text(type='text' name='minPrice' value='' data-type='price' data-placeholder='from' title='from' placeholder='from')
+                |                     -
+                input.placeholder-text(type='text' name='maxPrice' value='' data-type='price' data-placeholder='to' title='to' placeholder='to')
+                button.button-task(type='submit' data-event='PriceSelected') Update
+
+              hr
+              h3 Additional Info:
+              ul
+                li.highlight
+                  | All Ads
+                ul
+                  li
+                    a.attribute-selected(href='#')
+                      | Ads with Video
+                  li
+                    a.attribute-selected(href='#')
+                      | Ads with Images
+          //- .container-primary.top-space
+            header
+              | Kijiji Alerts 
+              span.tooltip-trigger(data-content='KijijiAlertTooltip' data-hasqtip='0') [?]
+              span#KijijiAlertTooltip.tooltip-content
+                | Kijiji Alerts are an email notification service where Kijiji users can have the newest Ads sent to your email address.
+                br
+                a(href='https://help.kijiji.ca/helpdesk/basics/creating-search-alerts' target='_blank' data-helpdesk-btn='learnmore' data-helpdesk-article='SearchAlert' rel='noopener noreferrer')
+                  | More Help
+            .content
+              p
+                | Get an alert with the newest ads for 
+                strong Classifieds
+                |  in 
+                strong Banff / Canmore
+                | .
+              a.button-open.next.alert-modal-trigger(data-galabel='btn=left-hand-nav')
+                | Sign Up
+                span.arrow-next
+          //- #KijijiAlerts.modal.has-email
+            .header
+              | Kijiji Alerts
+              .close-modal.close-x
+            form#FormKijijiAlert(action='/j-subscribe-alert.json' method='POST')
+              input(type='hidden' id='' name='ca.kijiji.xsrf.token' value='1575782545717.91b11da15709c7870e43da29ffa5a52a5c66a93406ed28e7204dff31627fa542')
+              .body
+                input#locationId(name='locationId' type='hidden' value='1700234')
+                input#categoryId(name='categoryId' type='hidden' value='')
+                input#keywords(name='keywords' type='hidden' value='')
+                input#searchView(name='searchView' type='hidden' value='LIST')
+                input#urgentOnly(name='urgentOnly' value='false' type='hidden')
+                input#cpoOnly(name='cpoOnly' value='false' type='hidden')
+                input#carproofOnly(name='carproofOnly' value='false' type='hidden')
+                input#highlightOnly(name='highlightOnly' value='false' type='hidden')
+                input#gpTopItem(name='gpTopItem' value='false' type='hidden')
+                input#hpGallery(name='hpGallery' value='false' type='hidden')
+                input#minPrice(name='minPrice' type='hidden' value='')
+                input#maxPrice(name='maxPrice' type='hidden' value='')
+                input#videoOnly(name='videoOnly' value='false' type='hidden')
+                input#hasImages(name='hasImages' value='false' type='hidden')
+                input#radius(name='radius' type='hidden' value='0.0')
+                input#address(name='address' type='hidden' value='')
+                input#veteranFriendly(name='veteranFriendly' value='false' type='hidden')
+                input#financingAvailable(name='financingAvailable' value='false' type='hidden')
+                input#dealerReviews(name='dealerReviews' value='false' type='hidden')
+                input#sortByName(name='sortByName' type='hidden' value='dateDesc')
+                input#itemType(name='itemType' type='hidden' value='')
+                input#itemPriceType(name='itemPriceType' type='hidden' value='')
