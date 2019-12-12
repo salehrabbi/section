@@ -47,6 +47,24 @@ header.main-header
           option(value='45') Jobs  
         button(type="submit") 
           <i class="fal fa-search"></i>  
-
+  .menu(style="background: #fff")
+    .container
+      nav.yamm.navbar.navbar-expand-lg.p-0
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-collapse-grid' aria-controls='navbar-collapse-grid' aria-expanded='false' aria-label='Toggle navigation')
+          <i class="fas fa-bars"></i>
+        #navbar-collapse-grid.navbar-collapse.collapse
+          ul.navbar-nav
+            - for(var z=0; z<5; z++)
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Buy & Sell
+                .dropdown-menu.p-0
+                  .yamm-content
+                    .row
+                      - for(var y=0; y<3; y++)
+                        .col-lg-3.col-12
+                          ul.dropdown-list
+                            - for(var x=0; x<8; x++)
+                              li
+                                a(href="#") All in Buy & Sell
 
 
