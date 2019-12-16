@@ -13,6 +13,14 @@
   margin-bottom: 15px;
   .d-grid {
     grid-template-columns: 1fr 1fr 1fr 68px;
+    @include md {
+      grid-template-columns: 1fr 68px;
+      grid-row-gap: 10px;
+      .ads,
+      .search {
+        grid-column: 1/-1;
+      }
+    }
   }
   input {
     height: 40px;
@@ -21,7 +29,9 @@
     color: #3e4153;
     border: 1px solid#d2d3d7;
     padding: 10px 20px;
-    border-right: none;
+    @media (min-width: 768px) {
+      border-right: none;
+    }
     &:focus {
       outline: none;
       border: 1px solid rgb(226, 46, 126);
@@ -51,8 +61,10 @@
       background: none;
       padding: 7px 20px;
       border: 1px solid #d2d3d7;
-      border-right: none;
       border-radius: 0;
+      @media (min-width: 768px) {
+        border-right: none;
+      }
       &:after {
         border-top: 0.3em solid #c5c6cb;
       }
@@ -65,15 +77,32 @@
   outline: 0 auto !important;
 }
 // ======================menu
+body.show {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  .header-top {
+    border-color: rgba(51, 51, 51, 0.8);
+  }
+}
 .main-header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 .menu {
   @include lg {
-    padding: 20px 0;
+    padding: 10px 0;
+  }
+}
+.menu-logo {
+  @media (min-width: 992px) {
+    order: 2;
   }
 }
 .yamm {
+  @include lg {
+    position: static;
+  }
 }
 .yamm .dropdown-menu {
   left: 0;
@@ -84,6 +113,31 @@
   @include lg {
     box-shadow: none;
     border: none;
+    &.show {
+      background-color: rgba(51, 51, 51, 0.8);
+      top: 0;
+      overflow-y: auto;
+      height: 100%;
+      position: absolute;
+      .yamm-content {
+        max-width: 350px;
+        background: #fff;
+        padding: 20px;
+        margin: 50px auto;
+        position: relative;
+        &:before {
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          content: "\f057";
+          position: absolute;
+          right: 15px;
+          top: 5px;
+          cursor: pointer;
+          z-index: 9;
+          font-size: 25px;
+        }
+      }
+    }
   }
 }
 .dropdown-toggle::after {

@@ -16,3 +16,11 @@ $(".playerID").click(function() {
     $("#VdoID").attr("data-play", 0);
   }
 });
+
+$(".dropdown .nav-link").click(function() {
+  $("body").addClass("show");
+});
+
+$(".dropdown-menu").click(function() {
+  $("body").removeClass("show");
+});

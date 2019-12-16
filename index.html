@@ -24,10 +24,10 @@
             <div class="logo-left ml-auto">
               <ul class="m-0 p-0 list-unstyled d-flex align-items-center flex-wrap">
                 <li class="mr-4"><a class="text-uppercase font-weight-bold" href="#">fr</a></li>
-                <li class="mr-4 icon"> <a href="#"><img src="dist/images/bell.png" alt=""></a></li>
-                <li class="mr-4 icon"><a href="#"><img src="dist/images/message.png" alt=""></a></li>
-                <li class="font-weight-bold"><a href="#">Register</a></li>
-                <li class="mx-1">or</li>
+                <li class="mr-4 icon d-none d-sm-block"> <a href="#"><img src="dist/images/bell.png" alt=""></a></li>
+                <li class="mr-4 icon d-none d-sm-block"><a href="#"><img src="dist/images/message.png" alt=""></a></li>
+                <li class="font-weight-bold d-none d-sm-block"><a href="#">Register</a></li>
+                <li class="mx-1 d-none d-sm-block">or</li>
                 <li class="font-weight-bold"><a href="#">Sign In</a></li>
                 <li class="ml-4"><a class="btn button" href="#">Post ad      </a></li>
               </ul>
@@ -38,8 +38,8 @@
       <div class="header-form">
         <div class="container">
           <div class="d-grid">
-            <input type="text" placeholder="Search for anything...">
-            <select class="selectpicker w-100" name="SearchCategory">
+            <input class="search" type="text" placeholder="Search for anything...">
+            <select class="selectpicker w-100 ads" name="SearchCategory">
               <option value="0">All Ads</option>
               <option value="10">Buy & Sell</option>
               <option value="72">Services</option>
@@ -70,6 +70,7 @@
         <div class="container">
           <nav class="yamm navbar navbar-expand-lg p-0">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" aria-controls="navbar-collapse-grid" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <div class="menu-logo ml-auto mb-1"><img src="dist/images/menu-logo.png" alt=""></div>
             <div class="navbar-collapse collapse" id="navbar-collapse-grid">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Buy & Sell</a>

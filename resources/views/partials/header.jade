@@ -8,15 +8,15 @@ header.main-header
           ul.m-0.p-0.list-unstyled.d-flex.align-items-center.flex-wrap
             li.mr-4
               a.text-uppercase.font-weight-bold(href="#") fr
-            li.mr-4.icon 
+            li.mr-4.icon.d-none.d-sm-block 
               a(href="#")
                 img(src="dist/images/bell.png" alt="")  
-            li.mr-4.icon
+            li.mr-4.icon.d-none.d-sm-block
               a(href="#")
                 img(src="dist/images/message.png" alt="") 
-            li.font-weight-bold
+            li.font-weight-bold.d-none.d-sm-block
               a(href="#") Register
-            li.mx-1 or
+            li.mx-1.d-none.d-sm-block or
             li.font-weight-bold
               a(href="#") Sign In
             li.ml-4
@@ -24,8 +24,8 @@ header.main-header
   .header-form
     .container
       .d-grid
-        input(type="text" placeholder="Search for anything...")
-        select.selectpicker.w-100(name='SearchCategory')
+        input.search(type="text" placeholder="Search for anything...")
+        select.selectpicker.w-100.ads(name='SearchCategory')
           option(value='0') All Ads
           option(value='10') Buy & Sell
           option(value='72') Services
@@ -52,6 +52,8 @@ header.main-header
       nav.yamm.navbar.navbar-expand-lg.p-0
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-collapse-grid' aria-controls='navbar-collapse-grid' aria-expanded='false' aria-label='Toggle navigation')
           <i class="fas fa-bars"></i>
+        .menu-logo.ml-auto.mb-1
+          img(src="dist/images/menu-logo.png" alt="")    
         #navbar-collapse-grid.navbar-collapse.collapse
           ul.navbar-nav
             - for(var z=0; z<5; z++)
@@ -66,5 +68,3 @@ header.main-header
                             - for(var x=0; x<8; x++)
                               li
                                 a(href="#") All in Buy & Sell
-
-
