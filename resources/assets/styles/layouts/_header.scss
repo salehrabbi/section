@@ -77,13 +77,18 @@
   outline: 0 auto !important;
 }
 // ======================menu
-body.show {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: fixed;
-  .header-top {
-    border-color: rgba(51, 51, 51, 0.8);
+body {
+  overflow-x: hidden;
+}
+@include lg {
+  body.show {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    .header-top {
+      border-color: rgba(51, 51, 51, 0.8);
+    }
   }
 }
 .main-header {
@@ -105,11 +110,12 @@ body.show {
   }
 }
 .yamm .dropdown-menu {
-  left: 0;
-  width: 100%;
-  right: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  // right: 0;
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  // box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
   @include lg {
     box-shadow: none;
     border: none;
